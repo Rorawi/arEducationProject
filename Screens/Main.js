@@ -1,12 +1,12 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import AchievementData from '../Components/AchievementData';
 import BottomBar from '../Components/BottomBar';
+import MainContentData from '../Components/MainContentData';
 
-const Achievement = () => {
+const Main = () => {
     return (
         <View style={styles.container}>
-            <AchievementData/>
+            <MainContentData/>
             <BottomBar/>
         </View>
     );
@@ -26,4 +26,4 @@ const styles = StyleSheet.create({
         },
 })
 
-export default Achievement;
+export default Main;

@@ -1,22 +1,12 @@
 import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { DrawerContentScrollView,DrawerItemList } from "@react-navigation/drawer";
 
-const CustomDrawer = ({ navigation }) => {
+const CustomDrawer = (props) => {
     return (
-      <View style={styles.container}>
-        <TouchableOpacity
-          style={styles.drawerItem}
-          onPress={() => navigation.navigate("Home")}
-        >
-          <Text style={styles.drawerItemText}>Home</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.drawerItem}
-          onPress={() => navigation.navigate("Contest")}
-        >
-          <Text style={styles.drawerItemText}>Contest</Text>
-        </TouchableOpacity>
-      </View>
+      <DrawerContentScrollView {...props}>
+        <DrawerItemList  {...props}/>
+      </DrawerContentScrollView>
     );
   };
   

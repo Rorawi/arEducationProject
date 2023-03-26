@@ -1,11 +1,13 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
+import BottomBar from '../Components/BottomBar';
 import MyBadgeData from '../Components/myBadgeData';
 
 const MyBagde = () => {
     return (
         <View style={styles.container}>
             <MyBadgeData/>
+            <BottomBar/>
         </View>
     );
 }

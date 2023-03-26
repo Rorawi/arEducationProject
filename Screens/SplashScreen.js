@@ -1,11 +1,17 @@
 import React from 'react';
 import {View, StyleSheet, Image} from 'react-native';
-import splashLogo from '../assets/images/splash-logo.gif'
+import splashLogo from '../assets/images/splashImg.gif'
 
 const SplashScreen = () => {
     return (
         <View style={styles.container}>
-            <Image source={splashLogo}/>
+            <Image source={splashLogo} style={{
+                width:160,
+                height:160,
+                borderColor: '#F7F3A6',
+                borderWidth:10,
+                alignSelf:"center"
+            }}/>
         </View>
     );
 }

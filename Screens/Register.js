@@ -33,7 +33,7 @@ const Register = () => {
               marginBottom: 10,
             }}
           >
-            REGISTERATION
+            Registration
           </Text>
           <Text style={styles.label}>First Name</Text>
           <TextInput
@@ -139,6 +139,8 @@ const styles = StyleSheet.create({
     maxWidth: 800,
     borderRadius: 75,
     marginTop: 40,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
   },
 
   input: {

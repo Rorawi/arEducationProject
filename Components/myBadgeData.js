@@ -37,6 +37,7 @@ const MyBadgeData = () => {
                 alignSelf: "center",
                 fontSize: 12,
                 fontWeight: 400,
+                textAlign:'center'
               }}
             >
               You’re a top contributor with 206,070,580 contributions made.
@@ -80,7 +81,7 @@ const MyBadgeData = () => {
                 }}
               >
                 <Image
-                  source={require("../assets/images/bITMARKFILES/bITMARKFILES/badges/13-Medal.png")}
+                  source={require("../assets/images/bITMARKFILES/bITMARKFILES/badges/29-Badge.png")}
                   style={{ width: 65, height: 65 }}
                 />
                 <View style={{ flexDirection: "column" }}>

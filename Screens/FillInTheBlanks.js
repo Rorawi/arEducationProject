@@ -1,12 +1,12 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import AchievementData from '../Components/AchievementData';
 import BottomBar from '../Components/BottomBar';
+import FillInTheBlanksData from '../Components/FillInTheBlanksData'
 
-const Achievement = () => {
+const FillInTheBlanks = () => {
     return (
         <View style={styles.container}>
-            <AchievementData/>
+            <FillInTheBlanksData/>
             <BottomBar/>
         </View>
     );
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor:'#FFFDD4',
         flex:1,
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
         position: 'absolute',
         top: 0,
@@ -26,4 +26,4 @@ const styles = StyleSheet.create({
         },
 })
 
-export default Achievement;
+export default FillInTheBlanks;

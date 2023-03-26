@@ -13,6 +13,7 @@ const AchievementData = () => {
             style={{
               color: "#FFFFFF",
               alignSelf: "center",
+              textAlign: 'center',
               fontSize: 12,
               fontWeight: 400,
             }}
@@ -75,10 +76,10 @@ const AchievementData = () => {
                 alignSelf: "center",
                 fontSize: 30,
                 fontWeight: 800,
-                marginVertical: 10,
+                marginTop: 7,
               }}
             >
-              Your Summary
+              Achievers
             </Text>
             <Text
               style={{
@@ -86,6 +87,7 @@ const AchievementData = () => {
                 alignSelf: "center",
                 fontSize: 12,
                 fontWeight: 400,
+                marginBottom: 33,
               }}
             >
               Highest completion rate
@@ -119,10 +121,10 @@ const AchievementData = () => {
                 source={require("../assets/images/profile.jpg")}
                 style={styles.profile}
               />
-              <Text style={{ color: "#F7F3A6" }}>Simpsons</Text>
+              <Text style={{ color: "#FFF" }}>Simpsons</Text>
             </View>
 
-            <Text style={{ color: "#F7F3A6" }}>95%</Text>
+            <Text style={{ color: "#FFF" }}>95%</Text>
             <Image
               source={require("../assets/images/bITMARKFILES/bITMARKFILES/badges/16-Medal.png")}
               style={styles.imageBadge}
@@ -138,10 +140,10 @@ const AchievementData = () => {
                 source={require("../assets/images/profile.jpg")}
                 style={styles.profile}
               />
-              <Text style={{ color: "#F7F3A6" }}>Simpsons</Text>
+              <Text style={{ color: "#FFF" }}>Simpsons</Text>
             </View>
 
-            <Text style={{ color: "#F7F3A6" }}>85%</Text>
+            <Text style={{ color: "#FFF" }}>85%</Text>
             <Image
               source={require("../assets/images/bITMARKFILES/bITMARKFILES/badges/17-Medal.png")}
               style={styles.imageBadge}
@@ -157,10 +159,10 @@ const AchievementData = () => {
                 source={require("../assets/images/profile.jpg")}
                 style={styles.profile}
               />
-              <Text style={{ color: "#F7F3A6" }}>Simpsons</Text>
+              <Text style={{ color: "#FFF" }}>Simpsons</Text>
             </View>
 
-            <Text style={{ color: "#F7F3A6" }}>79%</Text>
+            <Text style={{ color: "#FFF" }}>79%</Text>
             <Image
               source={require("../assets/images/bITMARKFILES/bITMARKFILES/badges/13-Medal.png")}
               style={styles.imageBadge}
@@ -176,6 +178,7 @@ const AchievementData = () => {
               alignSelf: "center",
               fontSize: 12,
               fontWeight: 400,
+              textAlign: 'center'
             }}
           >
             You’re a top contributor with 206,070,580 contributions made.
@@ -218,7 +221,7 @@ const AchievementData = () => {
               }}
             >
               <Image
-                source={require("../assets/images/bITMARKFILES/bITMARKFILES/badges/13-Medal.png")}
+                source={require("../assets/images/bITMARKFILES/bITMARKFILES/badges/29-Badge.png")}
                 style={{ width: 65, height: 65 }}
               />
               <View style={{ flexDirection: "column" }}>
@@ -266,114 +269,116 @@ const AchievementData = () => {
               alignSelf: "center",
               fontSize: 12,
               fontWeight: 400,
+              marginVertical: 10,
+              textAlign: 'center'
             }}
           >
-            Supports, contribution and assistance given to the community{" "}
+            Supports, contribution and assistance given to the community
           </Text>
 
-          <View style={{flexDirection: 'row',justifyContent: 'space-between',alignItems:'center',marginBottom: 15}}>
-              <View>
-                <Text style={{fontSize: 15,color:'#FFFFFF'}}>Flipcard</Text>
-                <Text style={{color:'#F7F3A6',fontSize: 12}}>Inactive for 100 days</Text>
-              </View>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 35 }}>
+            <View>
+              <Text style={{ fontSize: 15, color: '#FFFFFF' }}>Flipcard</Text>
+              <Text style={{ color: '#F7F3A6', fontSize: 12 }}>Inactive for 100 days</Text>
+            </View>
 
-              <TouchableOpacity style={styles.quizBtn}>
-                <Text style={{alignSelf: 'center',fontSize:12}}>Continue 30%</Text>
-              </TouchableOpacity>
+            <TouchableOpacity style={styles.quizBtn}>
+              <Text style={{ alignSelf: 'center', fontSize: 12 }}>Continue 30%</Text>
+            </TouchableOpacity>
           </View>
 
 
-          <View style={{flexDirection: 'row',justifyContent: 'space-between',alignItems:'center',marginBottom: 15}}>
-              <View>
-                <Text style={{fontSize: 15,color:'#FFFFFF'}}>Scratchcard</Text>
-                <Text style={{color:'#F7F3A6',fontSize: 12}}>Inactive for 10 days</Text>
-              </View>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 35 }}>
+            <View>
+              <Text style={{ fontSize: 15, color: '#FFFFFF' }}>Scratchcard</Text>
+              <Text style={{ color: '#F7F3A6', fontSize: 12 }}>Inactive for 10 days</Text>
+            </View>
 
-              <TouchableOpacity style={styles.quizBtn}>
-                <Text style={{alignSelf: 'center',fontSize:12}}>Continue 10%</Text>
-              </TouchableOpacity>
+            <TouchableOpacity style={styles.quizBtn}>
+              <Text style={{ alignSelf: 'center', fontSize: 12 }}>Continue 10%</Text>
+            </TouchableOpacity>
           </View>
 
 
-          <View style={{flexDirection: 'row',justifyContent: 'space-between',alignItems:'center',marginBottom: 15}}>
-              <View>
-                <Text style={{fontSize: 15,color:'#FFFFFF'}}>Sequencing</Text>
-                <Text style={{color:'#F7F3A6',fontSize: 12}}>Inactive for 12 days</Text>
-              </View>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 35 }}>
+            <View>
+              <Text style={{ fontSize: 15, color: '#FFFFFF' }}>Sequencing</Text>
+              <Text style={{ color: '#F7F3A6', fontSize: 12 }}>Inactive for 12 days</Text>
+            </View>
 
-              <TouchableOpacity style={styles.quizBtn}>
-                <Text style={{alignSelf: 'center',fontSize:12}}>Continue 30%</Text>
-              </TouchableOpacity>
+            <TouchableOpacity style={styles.quizBtn}>
+              <Text style={{ alignSelf: 'center', fontSize: 12 }}>Continue 30%</Text>
+            </TouchableOpacity>
           </View>
 
 
-          <View style={{flexDirection: 'row',justifyContent: 'space-between',alignItems:'center',marginBottom: 15}}>
-              <View>
-                <Text style={{fontSize: 15,color:'#FFFFFF'}}>Sorting</Text>
-                <Text style={{color:'#F7F3A6',fontSize: 12}}>Inactive for 0 days</Text>
-              </View>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 35 }}>
+            <View>
+              <Text style={{ fontSize: 15, color: '#FFFFFF' }}>Sorting</Text>
+              <Text style={{ color: '#F7F3A6', fontSize: 12 }}>Inactive for 0 days</Text>
+            </View>
 
-              <TouchableOpacity style={styles.quizBtn}>
-                <Text style={{alignSelf: 'center',fontSize:12}}>Retake 100%</Text>
-              </TouchableOpacity>
-          </View>
-
-          
-          <View style={{flexDirection: 'row',justifyContent: 'space-between',alignItems:'center',marginBottom: 15}}>
-              <View>
-                <Text style={{fontSize: 15,color:'#FFFFFF'}}>True/False</Text>
-                <Text style={{color:'#F7F3A6',fontSize: 12}}>Inactive for 100 days</Text>
-              </View>
-
-              <TouchableOpacity style={styles.quizBtn}>
-                <Text style={{alignSelf: 'center',fontSize:12}}>Continue 1%</Text>
-              </TouchableOpacity>
-          </View>
-
-          <View style={{flexDirection: 'row',justifyContent: 'space-between',alignItems:'center',marginBottom: 15}}>
-              <View>
-                <Text style={{fontSize: 15,color:'#FFFFFF'}}>Fill in the blanks</Text>
-                <Text style={{color:'#F7F3A6',fontSize: 12}}>Inactive for 19 days</Text>
-              </View>
-
-              <TouchableOpacity style={styles.quizBtn}>
-                <Text style={{alignSelf: 'center',fontSize:12}}>Continue 30%</Text>
-              </TouchableOpacity>
+            <TouchableOpacity style={styles.quizBtn}>
+              <Text style={{ alignSelf: 'center', fontSize: 12 }}>Retake 100%</Text>
+            </TouchableOpacity>
           </View>
 
 
-          <View style={{flexDirection: 'row',justifyContent: 'space-between',alignItems:'center',marginBottom: 15}}>
-              <View>
-                <Text style={{fontSize: 15,color:'#FFFFFF',width:120}}>Short Answers/pronounciations</Text>
-                <Text style={{color:'#F7F3A6',fontSize: 12}}>Inactive for 80 days</Text>
-              </View>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 35 }}>
+            <View>
+              <Text style={{ fontSize: 15, color: '#FFFFFF' }}>True/False</Text>
+              <Text style={{ color: '#F7F3A6', fontSize: 12 }}>Inactive for 100 days</Text>
+            </View>
 
-              <TouchableOpacity style={styles.quizBtn}>
-                <Text style={{alignSelf: 'center',fontSize:12}}>Continue 50%</Text>
-              </TouchableOpacity>
+            <TouchableOpacity style={styles.quizBtn}>
+              <Text style={{ alignSelf: 'center', fontSize: 12 }}>Continue 1%</Text>
+            </TouchableOpacity>
+          </View>
+
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 35 }}>
+            <View>
+              <Text style={{ fontSize: 15, color: '#FFFFFF' }}>Fill in the blanks</Text>
+              <Text style={{ color: '#F7F3A6', fontSize: 12 }}>Inactive for 19 days</Text>
+            </View>
+
+            <TouchableOpacity style={styles.quizBtn}>
+              <Text style={{ alignSelf: 'center', fontSize: 12 }}>Continue 30%</Text>
+            </TouchableOpacity>
           </View>
 
 
-          <View style={{flexDirection: 'row',justifyContent: 'space-between',alignItems:'center',marginBottom: 15}}>
-              <View>
-                <Text style={{fontSize: 15,color:'#FFFFFF'}}>Drag & Drop</Text>
-                <Text style={{color:'#F7F3A6',fontSize: 12}}>Inactive for 33 days</Text>
-              </View>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 35 }}>
+            <View>
+              <Text style={{ fontSize: 15, color: '#FFFFFF', width: 120 }}>Short Answers/pronounciations</Text>
+              <Text style={{ color: '#F7F3A6', fontSize: 12 }}>Inactive for 80 days</Text>
+            </View>
 
-              <TouchableOpacity style={styles.quizBtn}>
-                <Text style={{alignSelf: 'center',fontSize:12}}>Continue 3%</Text>
-              </TouchableOpacity>
+            <TouchableOpacity style={styles.quizBtn}>
+              <Text style={{ alignSelf: 'center', fontSize: 12 }}>Continue 50%</Text>
+            </TouchableOpacity>
           </View>
 
-          <View style={{flexDirection: 'row',justifyContent: 'space-between',alignItems:'center',marginBottom: 15}}>
-              <View>
-                <Text style={{fontSize: 15,color:'#FFFFFF'}}>Hotspot</Text>
-                <Text style={{color:'#F7F3A6',fontSize: 12}}>Inactive for 33 days</Text>
-              </View>
 
-              <TouchableOpacity style={styles.quizBtn}>
-                <Text style={{alignSelf: 'center',fontSize:12}}>Continue 3%</Text>
-              </TouchableOpacity>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 35 }}>
+            <View>
+              <Text style={{ fontSize: 15, color: '#FFFFFF' }}>Drag & Drop</Text>
+              <Text style={{ color: '#F7F3A6', fontSize: 12 }}>Inactive for 33 days</Text>
+            </View>
+
+            <TouchableOpacity style={styles.quizBtn}>
+              <Text style={{ alignSelf: 'center', fontSize: 12 }}>Continue 3%</Text>
+            </TouchableOpacity>
+          </View>
+
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 35 }}>
+            <View>
+              <Text style={{ fontSize: 15, color: '#FFFFFF' }}>Hotspot</Text>
+              <Text style={{ color: '#F7F3A6', fontSize: 12 }}>Inactive for 33 days</Text>
+            </View>
+
+            <TouchableOpacity style={styles.quizBtn}>
+              <Text style={{ alignSelf: 'center', fontSize: 12 }}>Continue 3%</Text>
+            </TouchableOpacity>
           </View>
 
 
@@ -388,7 +393,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#1A1A1A",
+    backgroundColor: "#000",
     width: 400,
     borderRadius: 20,
     marginTop: 30,
@@ -432,6 +437,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: 900,
     alignSelf: "center",
+    textAlign:'center'
   },
 
   profile: {
@@ -457,7 +463,7 @@ const styles = StyleSheet.create({
   quizBtn: {
     backgroundColor: '#F7F3A6',
     alignItems: 'center',
-    paddingHorizontal:15,
+    paddingHorizontal: 15,
     paddingVertical: 8,
     borderRadius: 6
   },

@@ -1,11 +1,13 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
+import BottomBar from '../Components/BottomBar';
 import SwipeCardData from '../Components/SwipeCardData'
 
 const SwipeCard = () => {
     return (
         <View style={styles.container}>
             <SwipeCardData/>
+            <BottomBar/>
         </View>
     );
 }

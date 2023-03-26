@@ -1,12 +1,12 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import AchievementData from '../Components/AchievementData';
 import BottomBar from '../Components/BottomBar';
+import FlipCardData from '../Components/FlipCardData'
 
-const Achievement = () => {
+const FlipCard = () => {
     return (
         <View style={styles.container}>
-            <AchievementData/>
+            <FlipCardData/>
             <BottomBar/>
         </View>
     );
@@ -26,4 +26,4 @@ const styles = StyleSheet.create({
         },
 })
 
-export default Achievement;
+export default FlipCard;

@@ -1,34 +1,15 @@
-import React from "react";
-import { View, StyleSheet, Text, Button } from "react-native";
-import { createDrawerNavigator } from "@react-navigation/drawer";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { NavigationContainer } from "@react-navigation/native";
-import CustomDrawer from "../Components/CustomDrawer";
-import Register from "./Register";
-import Contest from "./Contest";
+import React from 'react';
+import { Text } from 'react-native';
+import {View, StyleSheet} from 'react-native';
 
-const Drawer = createDrawerNavigator();
-const Screens=()=> {
-  <NavigationContainer>
-  <Drawer.Navigator drawerContent={(props) => <CustomDrawer {...props} />}>
-    <Drawer.Screen name="Contest" component={Contest} />
-    <Drawer.Screen name="Home" component={Register} />
-  </Drawer.Navigator>
-</NavigationContainer>
-}
 const NavigateToScreens = () => {
   return (
-  <View >
-    <Screens/>
-  </View>
+    <View>
+      <Text>Hello</Text>
+    </View>
   );
-
 }
 
+const styles = StyleSheet.create({})
 
-const styles = StyleSheet.create({
-  // container: {
-  //   flex: 1,
-  // },
-});
 export default NavigateToScreens;
