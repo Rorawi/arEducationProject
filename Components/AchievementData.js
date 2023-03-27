@@ -200,6 +200,7 @@ const AchievementData = () => {
               fontSize: 16,
               alignSelf: "center",
               marginTop: 20,
+              fontWeight: 900
             }}
           >
             Simpsons B
@@ -252,7 +253,7 @@ const AchievementData = () => {
               style={{
                 alignSelf: "center",
                 marginTop: 20,
-                fontSize: 18,
+                fontSize: 16,
                 color: "#F7F3A6",
               }}
             >
@@ -429,7 +430,8 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     fontSize: 30,
     fontWeight: 800,
-    marginVertical: 10,
+    marginTop: 10,
+    marginBottom: 0
   },
 
   smallText: {

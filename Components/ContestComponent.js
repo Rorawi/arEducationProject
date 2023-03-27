@@ -9,7 +9,7 @@ const ContestComponent = ({name,status,contributions,profile,badge}) => {
                 <Image source={profile} style={{width:100,height:100,borderRadius: 60,borderColor: '#F7F3A6',borderWidth:3,marginRight: 20}}/>
                 <Image source={badge} style={styles.imageBadge}/>
             </View>
-            <View>
+            <View style={{alignItems:'center',marginTop:-30}}>
             <Text style={styles.textColor}>{name}</Text>
             <Text style={{color:'#fff',fontSize: 15,fontWeight:400}}>{status}</Text>
             <Text style={{color:'#fff',fontSize: 15,fontWeight:400}}>{contributions}</Text>

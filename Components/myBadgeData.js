@@ -258,6 +258,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: 900,
     alignSelf: "center",
+    textAlign:'center'
   },
 
   profile: {

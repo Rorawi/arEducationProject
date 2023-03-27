@@ -1,7 +1,8 @@
 import React from "react";
 import { ScrollView, Text } from "react-native";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, StyleSheet, TouchableOpacity,Image } from "react-native";
 import { Fontisto } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 
 const FillInTheBlanksData = () => {
   return (
@@ -19,6 +20,45 @@ const FillInTheBlanksData = () => {
             <Text style={[styles.coloredText, styles.topic]}>
               Select Language
             </Text>
+           <View style={{top:12}}>
+           <View style={{flexDirection:'row'}}>
+            <View style={{flexDirection:'column'}}>
+            <Image source={require('../assets/images/uk1.png')} style={{top:1}}/>
+            <Text style={{color:'#fff',textAlign:'center'}}>UK</Text>
+            </View>
+           <View style={{flexDirection:'row',justifyContent:'center',}}>
+            <MaterialCommunityIcons name="menu-left" size={26} color="#F7F3A6" style={{
+              marginRight: -7
+            }}/>
+            <MaterialCommunityIcons name="menu-right" size={26} color="#F7F3A6" style={{
+              marginLeft: -7
+            }}/>
+            </View>
+            <View style={{flexDirection:'column'}}>
+            <Image source={require('../assets/images/gem.png')} style={{top:1}}/>
+            <Text style={{color:'#fff',textAlign:'center'}}>UK</Text>
+            </View>
+           </View>
+           
+           <View style={{flexDirection:'row'}}>
+           <View style={{flexDirection:'column'}}>
+            <Image source={require('../assets/images/gem.png')} style={{top:1}}/>
+            <Text style={{color:'#fff',textAlign:'center'}}>UK</Text>
+            </View>
+           <View style={{flexDirection:'row',justifyContent:'center',}}>
+            <MaterialCommunityIcons name="menu-left" size={26} color="#F7F3A6" style={{
+              marginRight: -7
+            }}/>
+            <MaterialCommunityIcons name="menu-right" size={26} color="#F7F3A6" style={{
+              marginLeft: -7
+            }}/>
+            </View>
+            <View style={{flexDirection:'column'}}>
+            <Image source={require('../assets/images/uk.png')} style={{top:1}}/>
+            <Text style={{color:'#fff',textAlign:'center'}}>UK</Text>
+            </View>
+           </View>
+           </View>
           </View>
 
           <View style={styles.progressBox}>
@@ -184,7 +224,7 @@ const styles = StyleSheet.create({
 
   anwerBtn: {
     paddingVertical: 10,
-    borderRadius: 13,
+    borderRadius: 10,
     backgroundColor: "#F7F3A6",
     borderWidth: 2,
     marginBottom: 14,
@@ -193,7 +233,7 @@ const styles = StyleSheet.create({
   },
   choiceBtn: {
     paddingVertical: 10,
-    borderRadius: 20,
+    borderRadius: 10,
     backgroundColor: "#000",
     borderWidth: 2,
     marginBottom: 14,

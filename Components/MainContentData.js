@@ -19,6 +19,8 @@ import TOD from "../assets/images/swiperImage/TOD.gif";
 import pronounce from "../assets/images/swiperImage/pronounce.gif";
 import Sequencing from "../assets/images/swiperImage/Sequencing.gif";
 import { useNavigation } from "@react-navigation/native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+
 const MainContentData = () => {
   const navigation = useNavigation();
   return (
@@ -36,10 +38,86 @@ const MainContentData = () => {
             <Text style={[styles.coloredText, styles.topic]}>
               Select Language
             </Text>
+            <View style={{ top: 12 }}>
+              <View style={{ flexDirection: "row" }}>
+                <View style={{ flexDirection: "column" }}>
+                  <Image
+                    source={require("../assets/images/uk1.png")}
+                    style={{ top: 1 }}
+                  />
+                  <Text style={{ color: "#fff", textAlign: "center" }}>UK</Text>
+                </View>
+                <View
+                  style={{ flexDirection: "row", justifyContent: "center" }}
+                >
+                  <MaterialCommunityIcons
+                    name="menu-left"
+                    size={26}
+                    color="#F7F3A6"
+                    style={{
+                      marginRight: -7,
+                    }}
+                  />
+                  <MaterialCommunityIcons
+                    name="menu-right"
+                    size={26}
+                    color="#F7F3A6"
+                    style={{
+                      marginLeft: -7,
+                    }}
+                  />
+                </View>
+                <View style={{ flexDirection: "column" }}>
+                  <Image
+                    source={require("../assets/images/gem.png")}
+                    style={{ top: 1 }}
+                  />
+                  <Text style={{ color: "#fff", textAlign: "center" }}>DE</Text>
+                </View>
+              </View>
+
+              <View style={{ flexDirection: "row" }}>
+                <View style={{ flexDirection: "column" }}>
+                  <Image
+                    source={require("../assets/images/gem.png")}
+                    style={{ top: 1 }}
+                  />
+                  <Text style={{ color: "#fff", textAlign: "center" }}>DE</Text>
+                </View>
+                <View
+                  style={{ flexDirection: "row", justifyContent: "center" }}
+                >
+                  <MaterialCommunityIcons
+                    name="menu-left"
+                    size={26}
+                    color="#F7F3A6"
+                    style={{
+                      marginRight: -7,
+                    }}
+                  />
+                  <MaterialCommunityIcons
+                    name="menu-right"
+                    size={26}
+                    color="#F7F3A6"
+                    style={{
+                      marginLeft: -7,
+                    }}
+                  />
+                </View>
+                <View style={{ flexDirection: "column" }}>
+                  <Image
+                    source={require("../assets/images/uk.png")}
+                    style={{ top: 1 }}
+                  />
+                  <Text style={{ color: "#fff", textAlign: "center" }}>UK</Text>
+                </View>
+              </View>
+            </View>
           </View>
 
           <View style={styles.progressBox}>
             <Text style={[styles.coloredText, styles.topic]}>Progress</Text>
+
             <View>
               <View
                 style={[
@@ -223,7 +301,8 @@ const MainContentData = () => {
                   >
                     <Text style={styles.text}>Sequencing</Text>
                     <Text style={styles.subText}>
-                      Learn by pronouncing text that that appear.
+                      Learn by arranging things in order for which they should
+                      be
                     </Text>
                   </View>
                 </View>
@@ -254,7 +333,7 @@ const MainContentData = () => {
             <TouchableOpacity
               style={{ alignItems: "center", overflow: "hidden" }}
               onPress={() => {
-                navigation.navigate("FillInTheBlanks");
+                navigation.navigate("hotspot");
               }}
             >
               <View style={styles.challenges}>
@@ -275,7 +354,7 @@ const MainContentData = () => {
             <TouchableOpacity
               style={{ alignItems: "center", overflow: "hidden" }}
               onPress={() => {
-                navigation.navigate("FillInTheBlanks");
+                navigation.navigate("Flipcard1");
               }}
             >
               <View style={styles.challenges}>
@@ -293,11 +372,10 @@ const MainContentData = () => {
               </View>
             </TouchableOpacity>
 
-
             <TouchableOpacity
               style={{ alignItems: "center", overflow: "hidden" }}
               onPress={() => {
-                navigation.navigate("FillInTheBlanks");
+                navigation.navigate("Flipimg");
               }}
             >
               <View style={styles.challenges}>
@@ -314,7 +392,6 @@ const MainContentData = () => {
                 </View>
               </View>
             </TouchableOpacity>
-            
           </Swiper>
         </View>
       </View>

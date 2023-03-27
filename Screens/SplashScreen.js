@@ -10,7 +10,8 @@ const SplashScreen = () => {
                 height:160,
                 borderColor: '#F7F3A6',
                 borderWidth:10,
-                alignSelf:"center"
+                justifyContent:'flex-start',
+                marginTop: -350
             }}/>
         </View>
     );

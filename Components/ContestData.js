@@ -103,7 +103,8 @@ const ContestData = () => {
           alignSelf: "center",
           fontSize: 30,
           fontWeight: 800,
-          marginVertical: 10,
+          marginVBottom: 10,
+          marginTop: 32
         }}
       >
         LeaderBoard

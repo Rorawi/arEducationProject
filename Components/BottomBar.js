@@ -19,19 +19,20 @@ const BottomBar = ({ handleMicrophone }) => {
       <AntDesign name="home" size={24} color="#fff" />
             </TouchableOpacity>
       <TouchableOpacity style={styles.bottomBarButton}>
-        <FontAwesome name="user" size={24} color="#fff" />
+        <Image source={require('../assets/menuicons/share.png')}/>
       </TouchableOpacity>
       <TouchableOpacity onPress={handleMicrophone} style={[styles.bottomBarButton,styles.mic]}>
-        <FontAwesome name="microphone" size={24} color="#fff" style={{alignSelf:'center'}}/>
+      <Image source={require('../assets/menuicons/mic.png')}/>
       </TouchableOpacity>
       <TouchableOpacity style={styles.bottomBarButton}>
-        <FontAwesome name="user" size={24} color="#fff" />
+      <Image source={require('../assets/menuicons/notify.png')}/>
       </TouchableOpacity>
       <TouchableOpacity style={styles.bottomBarButton} onPress={
         ()=> {
           navigation.navigate('Badges')
         }
       }>
+        
       <Image
             source={require("../assets/images/profile.jpg")}
             style={{

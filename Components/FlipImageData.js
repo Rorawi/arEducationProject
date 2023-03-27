@@ -9,7 +9,7 @@ import {
   Image,
 } from "react-native";
 import plane from "../assets/images/nightflight.jpg";
-import { MaterialCommunityIcons } from '@expo/vector-icons'; 
+import { MaterialCommunityIcons} from '@expo/vector-icons'
 
 const FlipCardData = () => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -98,7 +98,6 @@ const FlipCardData = () => {
            </View>
            </View>
           </View>
-
           <View style={styles.progressBox}>
             <Text style={[styles.coloredText, styles.topic]}>Progress</Text>
             <View>
@@ -162,58 +161,9 @@ const FlipCardData = () => {
           <Text style={styles.title}>Identify the scene</Text>
         </View>
 
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "space-evenly",
-            marginBottom: 40,
-          }}
-        >
-          {/* <View style={styles.container}> */}
-            <View style={styles.cardContainer}>
-              <Animated.View
-                style={[styles.card, styles.frontCard, frontAnimatedStyle]}
-              >
-                <Image source={plane} style={styles.img} />
-                <View style={{marginTop: 50}}>
-            <TouchableOpacity style={styles.anwerBtn} onPress={()=>{
-               flipCard();
-               console.log("Clicked");
-            }}>
-            <Text style={{ color: "#fff", alignSelf: "center",fontSize:24 }}>True</Text>
-          </TouchableOpacity>
+        
 
-          <TouchableOpacity style={styles.anwerBtn}>
-            <Text style={{ color: "#fff", alignSelf: "center",fontSize:24 }}>False</Text>
-          </TouchableOpacity>
-          </View>
-              </Animated.View>
-              <Animated.View
-                style={[styles.backcard, styles.backCard,styles.cardContainer, backAnimatedStyle]}
-              >
-                <Image source={plane} style={[styles.img, { height: 269,zIndex:-1 }]} />
-                  <Text style={{color:'#fff'}}>
-                  <Text style={{color:'#F7F3A6'}}>Airport</Text>, also called air terminal, aerodrome, or airfield,
-                    site and installation for the takeoff and landing of
-                    aircraft
-                  </Text>
-                <TouchableOpacity
-                  // onPress={() => {
-                  //   flipCard();
-                  //   console.log("Clicked");
-                  // }}
-
-                  style={{justifyContent:'flex-end'}}
-                >
-                  <Text style={[styles.cardText, { alignSelf: "center" }]}>
-                    Back To Question
-                  </Text>
-                </TouchableOpacity>
-              </Animated.View>
-            </View>
-          </View>
-        </View>
-      {/* </View> */}
+       </View>
     </ScrollView>
   );
 };

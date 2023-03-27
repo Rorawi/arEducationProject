@@ -10,7 +10,7 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [surname, setSurname] = useState("");
   const [selectedValue, setSelectedValue] = useState('teacher');
-//   const navigation = useNavigation()
+  const navigation = useNavigation()
 
   return (
     <View style={styles.container}>
@@ -79,7 +79,9 @@ const Register = () => {
             </Picker>
           </View>
 
-          <TouchableOpacity style={styles.signUpBtn}>
+          <TouchableOpacity style={styles.signUpBtn}  onPress={() => {
+                navigation.navigate("drawer");
+              }}>
             <Text style={styles.signUpBtnText}>Sign Up</Text>
           </TouchableOpacity>
 
