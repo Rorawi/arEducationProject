@@ -1,20 +1,20 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import BottomBar from '../Components/BottomBar';
-import MainContentData from '../Components/MainContentData';
+import HotspotData from '../Components/HotspotData';
 
-const Main = () => {
+const Hotspot = () => {
     return (
         <View style={styles.container}>
-            <MainContentData/>
-            {/* <BottomBar/> */}
+            <HotspotData/>
+            <BottomBar/>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor:'#303030',
+        backgroundColor:'#FFFDD4',
         flex:1,
         justifyContent: 'center',
         alignItems: 'center',
@@ -26,4 +26,4 @@ const styles = StyleSheet.create({
         },
 })
 
-export default Main;
+export default Hotspot;

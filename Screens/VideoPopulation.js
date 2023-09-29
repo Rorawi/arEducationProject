@@ -1,12 +1,11 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import BottomBar from '../Components/BottomBar';
-import MainContentData from '../Components/MainContentData';
-
-const Main = () => {
+import VideoData from '../Components/VideoData';
+const VideoPopulation = () => {
     return (
         <View style={styles.container}>
-            <MainContentData/>
+            <VideoData/>
             {/* <BottomBar/> */}
         </View>
     );
@@ -14,7 +13,7 @@ const Main = () => {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor:'#303030',
+        backgroundColor: "#424242",
         flex:1,
         justifyContent: 'center',
         alignItems: 'center',
@@ -26,4 +25,4 @@ const styles = StyleSheet.create({
         },
 })
 
-export default Main;
+export default VideoPopulation;
