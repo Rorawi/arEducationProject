@@ -36,7 +36,6 @@ const styles = StyleSheet.create({
     // backgroundColor: "#f2f2f2",
     paddingTop: 50,
     paddingHorizontal: 20,
-    borderBottomRightRadius:25
   },
   drawerItem: {
     marginBottom: 20,

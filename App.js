@@ -7,14 +7,17 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons } from "@expo/vector-icons";
 import VideoPopulation from "./Screens/VideoPopulation";
-import CustomDrawer from "./Components/CustomDrawer"
+import Constants from 'expo-constants';
+import CustomDrawer from "./Components/CustomDrawer";
 import {
   FontAwesome5,
   AntDesign,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
+import aricon from "./assets/images/swiperImage/aricon.png"
+import ReadMeComponent from "./Components/ReadMe";
 
 const Stack = createStackNavigator();
 
@@ -38,34 +41,42 @@ export function BottomTab() {
           // You can return any component that you like here!
           return <Ionicons name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: "tomato",
-        tabBarInactiveTintColor: "gray",
+        tabBarActiveTintColor: "#7FFF7F",
+        tabBarInactiveTintColor: "grey",
+        tabBarBackgroundColor: "#424242",
+        tabBarStyle: {
+          backgroundColor: '#212121', // Set the background color here
+        },
       })}
     >
-      <Tab.Screen name="Main" component={Main} 
-     options={{
-      title: 'Home',
-      headerStyle: {
-        backgroundColor: '#212121',
-      },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
-    }}
+      <Tab.Screen
+        name="Main"
+        component={Main}
+        options={{
+          title: "Home",
+          headerStyle: {
+            backgroundColor: "#212121",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+        }}
       />
-      <Tab.Screen name="Video" component={VideoPopulation} 
-      options={{
-        title: 'Study Videos',
-        headerStyle: {
-          backgroundColor: '#212121',
-          textAlign: "center"
-        },
-        headerTintColor: '#fff',
-        headerTitleStyle: {
-          fontWeight: 'bold',
-        },
-      }}
+      <Tab.Screen
+        name="Video"
+        component={VideoPopulation}
+        options={{
+          title: "Study Videos",
+          headerStyle: {
+            backgroundColor: "#212121",
+            textAlign: "center",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+        }}
       />
     </Tab.Navigator>
   );
@@ -76,32 +87,57 @@ export const DrawerNavigator = () => {
     <Drawer.Navigator
       screenOptions={{
         headerShown: false,
-        drawerActiveBackgroundColor: '#FAD04B',
-        drawerActiveTintColor:'#000',
-        drawerInactiveTintColor:'#fff',
+        drawerActiveBackgroundColor: "#FAD04B",
+        drawerActiveTintColor: "#000",
+        drawerInactiveTintColor: "#fff",
         drawerStyle: {
-          backgroundColor: "#000",
+          backgroundColor: "#424242",
           width: 240,
-          borderTopRightRadius:86,
-          borderBottomRightRadius:86
         },
-
       }}
       drawerContent={(props) => <CustomDrawer {...props} />}
     >
-      <Drawer.Screen name="Home" component={BottomTab} options={{
-        drawerIcon:(({color})=> {
-         return <MaterialCommunityIcons name="home-outline" size={24} color={color} style={{marginRight:-25}}/>
-        })
-      }}/>
-     
+      <Drawer.Screen
+        name="Home"
+        component={BottomTab}
+        options={{
+          drawerIcon: ({ color }) => {
+            return (
+              <MaterialCommunityIcons
+                name="home-outline"
+                size={24}
+                color={color}
+                style={{ marginRight: -25 }}
+              />
+            );
+          },
+        }}
+      />
+
+      <Drawer.Screen
+        name="ReadMe"
+        component={ReadMeComponent}
+        options={{
+          drawerIcon: ({ color }) => {
+            return (
+              <MaterialCommunityIcons
+                name="bookmark-outline"
+                size={24}
+                color={color}
+                style={{ marginRight: -25 }}
+              />
+            );
+          },
+        }}
+      />
     </Drawer.Navigator>
   );
 };
 
-
 export default function App() {
   const [loading, setLoading] = useState(true);
+
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -109,8 +145,24 @@ export default function App() {
     setLoading(true);
   }, []);
 
+
+async function initializeApp() {
+  try {
+    await Constants.getWebViewUserAgentAsync();
+    // Now you can access Constants properties safely
+  } catch (error) {
+    console.error('Error initializing Constants:', error);
+  }
+}
+
+initializeApp();
+
+
   return (
     <View style={styles.container}>
+      <StatusBar backgroundColor="#000" barStyle="light-content" translucent={false}
+ />
+
       <NavigationContainer>
         {loading ? <SplashScreen /> : <DrawerNavigator />}
       </NavigationContainer>
@@ -123,43 +175,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import { StatusBar } from "expo-status-bar";
 // import { StyleSheet, Text, View } from "react-native";
@@ -315,7 +330,7 @@ const styles = StyleSheet.create({
 //           //         component={FlipImage}
 //           //         options={{ headerShown: false }}
 //           //       />
-                
+
 //           //       <Stack.Screen
 //           //         name="hotspot"
 //           //         component={Hotspot}

@@ -1,18 +1,13 @@
 import React from 'react';
-import {View, StyleSheet, Image} from 'react-native';
+import {View, StyleSheet, Image,Text} from 'react-native';
 import splashLogo from '../assets/images/splashImg.gif'
+import aricon from "../assets/images/swiperImage/aricon.png"
 
 const SplashScreen = () => {
     return (
         <View style={styles.container}>
-            <Image source={splashLogo} style={{
-                width:160,
-                height:160,
-                borderColor: '#F7F3A6',
-                borderWidth:10,
-                justifyContent:'flex-start',
-                marginTop: -350
-            }}/>
+           <Text style={styles.text}>LearnAR</Text>
+           <Image source={aricon} style={styles.image}/>
         </View>
     );
 }
@@ -23,12 +18,27 @@ const styles = StyleSheet.create({
         flex:1,
         justifyContent: 'center',
         alignItems: 'center',
-        position: 'absolute',
-        top: 0,
-        bottom:0,
-        right:0,
-        left:0
+        // position: 'absolute',
+        // top: 0,
+        // bottom:0,
+        // right:0,
+        // left:0
     },
+
+    text : {
+        fontSize: 35,
+        color:"#fff",
+        fontWeight: "bold",
+        marginBottom:20
+    },
+
+    image: {
+        width:40,
+        height: 40
+    }
+
+
+
 })
 
 export default SplashScreen;
