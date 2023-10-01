@@ -9,14 +9,12 @@ import {
   Modal,
   Linking,
   Alert,
-  ImageBackground
-
+  ImageBackground,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 import { Video } from "expo-av"; // Import Expo Video
-import wallpaper from "../assets/images/swiperImage/wbg1.png"
-
+import wallpaper from "../assets/images/swiperImage/wbg1.png";
 
 const images = [
   {
@@ -40,16 +38,20 @@ const images = [
     linktoVideo:
       "https://www.youtube.com/watch?v=F9SWESAO-r8&list=PLVkAiMiemh5JhnrdZMkClQ9cDHGI128gR",
   },
+  {
+    image: require("../assets/images/swiperImage/arimg.webp"),
+    thumbnailText: "Augmented Reality-Adobe Aero",
+    desc: "Get introduced to User Interface design principles, enhancing your skills in creating user-friendly interfaces.",
+    linktoVideo:
+      "https://youtube.com/playlist?list=PLVkAiMiemh5JhnrdZMkClQ9cDHGI128gR&si=zVyvMDSAFyXqnZYo",
+  },
   // Add more image objects as needed
 ];
-
-
 
 const VideoData = () => {
   const [isModalVisible, setModalVisible] = React.useState(false);
   const imageUrl = "https://adobeaero.app.link/EOSgZFhZsCb"; // Replace with your image URL
   const videoRef = React.useRef(null); // Reference to the Expo Video component
-
 
   const toggleModal = () => {
     setModalVisible(!isModalVisible);
@@ -109,80 +111,89 @@ const VideoData = () => {
 
   return (
     <ImageBackground source={wallpaper} resizeMode="cover">
-    <ScrollView>
-      <View>
-        <View
-          style={{
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            marginVertical: 20,
-            //   flexWrap: "wrap",
-          }}
-        >
-          {images.map((link, index) => {
-            return (
-              <TouchableOpacity key={index} onPress={() => openLink(link.linktoVideo)}>
-              <View
-                style={[
-                  styles.thumbnailContainer,
-                  getShadowStyle(), // Apply the shadow style
-                ]}
-              >
-                <Image source={link.image} style={styles.thumbnailImage} />
-                <View style={styles.textContainer}>
-                  <Text style={styles.thumbnailText}>
-                  <View style={styles.iconContainer}>
+      <ScrollView style={styles.container}>
+        <View>
+          <View
+            style={{
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              marginVertical: 20,
+              //   flexWrap: "wrap",
+            }}
+          >
+            {images.map((link, index) => {
+              return (
+                <TouchableOpacity
+                  key={index}
+                  onPress={() => openLink(link.linktoVideo)}
+                >
+                  <View
+                    style={[
+                      styles.thumbnailContainer,
+                      getShadowStyle(), // Apply the shadow style
+                    ]}
+                  >
+                    <Image source={link.image} style={styles.thumbnailImage} />
+                    <View style={styles.textContainer}>
+                      <Text style={styles.thumbnailText}>
+                        {/* <View style={styles.iconContainer}>
                   <Ionicons name="ios-videocam" size={14} color="#fff" style={styles.icon}/>
-</View>
-                  <Text style={styles.boldText}>{link.thumbnailText}</Text>
-                  </Text>
-                  <Text style={styles.descText}>
-                  <View style={styles.iconContainer}>
+</View> */}
+                        <Text style={styles.boldText}>
+                          {link.thumbnailText}
+                        </Text>
+                      </Text>
+                      <Text style={styles.descText}>
+                        {/* <View style={styles.iconContainer}>
                   <Ionicons name="ios-information" size={14} color="#fff" style={styles.icon}/>
+                  </View> */}
+                        {link.desc}
+                      </Text>
+                    </View>
                   </View>
-                    {link.desc}
-                  </Text>
-                </View>
-              </View>
-            </TouchableOpacity>        
-            );
-          })}
+                </TouchableOpacity>
+              );
+            })}
+          </View>
         </View>
-      </View>
 
-      {/* Video Player Modal */}
-      <Modal visible={isModalVisible} transparent={true}>
-        <View style={styles.modalContainer}>
-          <TouchableOpacity style={styles.closeButton} onPress={toggleModal}>
-            <Text style={styles.closeButtonText}>Close</Text>
-          </TouchableOpacity>
-          <Video
-            ref={videoRef}
-            source={{ uri: imageUrl }} // Replace with the video URL
-            style={styles.previewVideo}
-            useNativeControls={true} // Use native video controls
-            resizeMode="contain"
-            shouldPlay // Auto-play the video
-          />
-        </View>
-      </Modal>
-    </ScrollView>
+        {/* Video Player Modal */}
+        <Modal visible={isModalVisible} transparent={true}>
+          <View style={styles.modalContainer}>
+            <TouchableOpacity style={styles.closeButton} onPress={toggleModal}>
+              <Text style={styles.closeButtonText}>Close</Text>
+            </TouchableOpacity>
+            <Video
+              ref={videoRef}
+              source={{ uri: imageUrl }} // Replace with the video URL
+              style={styles.previewVideo}
+              useNativeControls={true} // Use native video controls
+              resizeMode="contain"
+              shouldPlay // Auto-play the video
+            />
+          </View>
+        </Modal>
+      </ScrollView>
     </ImageBackground>
-
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent dark background
+  },
   thumbnailContainer: {
     width: 340,
     backgroundColor: "rgba(255, 255, 255, 0.1)", // Frosted glass background
-    backdropFilter: 'blur(10px)', // Apply blur effect
+    backdropFilter: "blur(10px)", // Apply blur effect
     borderRadius: 10,
     paddingBottom: 15,
     marginHorizontal: 7,
     marginBottom: 20,
-    borderColor:"#7FFF7F",
+    // borderColor: "#7FFF7F",
+    borderColor: "rgba(255, 255, 255, 0.4)",
+
     borderWidth: 1,
     overflow: "hidden",
   },
@@ -230,9 +241,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginBottom: 10,
-    alignSelf: "center"
+    alignSelf: "center",
   },
-  
+
   linkText: {
     color: "#fff",
     fontSize: 12,
